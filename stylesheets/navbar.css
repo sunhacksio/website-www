@@ -41,7 +41,7 @@ ul.nav a.active {
   padding-bottom: 15px !important; }
 
 .top-nav-collapse {
-  background-color: #faf8f3;
+  background-color: hsla(42, 100%, 88%, 0.45);
   border: 0;
   padding: 0; }
 
