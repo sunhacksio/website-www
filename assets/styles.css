@@ -1,0 +1,91 @@
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#home {
+    height: 100vh;
+    width: 100vw;
+    /* background: black; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#home img {
+    width: 300px;
+    /* margin: auto; */
+}
+
+#home h3 {
+    /* margin: 0 auto; */
+    color: white;
+    font-weight: normal;
+    font-size: 1.25rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Courier New, Courier, monospace;
+}
+
+
+#cta {
+    color: white;
+    width: 300px;
+    font-family: Courier New, Courier, monospace;
+}
+
+#cta a {
+    color: white;
+    padding: 3px;
+    margin-left: 32.5px;
+}
+
+#cta a.cli {
+    background: rgba(0, 0, 0, 0.527);
+    text-decoration: none;
+    margin-left: 0;
+}
+
+.cli::after {
+    content: " █";
+    /* text-decoration: none !important; */
+    animation: blink 1s ease infinite;
+}
+
+.cli::before {
+    content: "~$ ";
+    /* text-decoration: none !important; */
+    /* animation: blink 1s ease infinite; */
+    margin-left: 0px;
+}
+
+section {
+  box-sizing: border-box; 
+  padding-top: 60px; 
+  position: relative; 
+  width: 100%;
+}
+section h1 {
+  font-size: 40px; 
+  margin-bottom: 20px; 
+}
+.plain {
+  font-size: 1.4em; 
+  margin: 0; 
+  padding: 20px 75px; 
+  text-align: justify; 
+}

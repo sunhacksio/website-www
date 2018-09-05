@@ -5,142 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/small-yellow-sun.png">
+    <link rel="icon" href="small-yellow-sun.png">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/navbar.css">
     <title>sunhacks</title>
-    <style>
-        @-webkit-keyframes SunhacksSunset {
-            0% {
-                background-position: 50% 0%
-            }
-            50% {
-                background-position: 50% 100%
-            }
-            100% {
-                background-position: 50% 0%
-            }
-        }
-
-        @-moz-keyframes SunhacksSunset {
-            0% {
-                background-position: 50% 0%
-            }
-            50% {
-                background-position: 50% 100%
-            }
-            100% {
-                background-position: 50% 0%
-            }
-        }
-
-        @keyframes SunhacksSunset {
-            0% {
-                background-position: 50% 0%
-            }
-            50% {
-                background-position: 50% 100%
-            }
-            100% {
-                background-position: 50% 0%
-            }
-        }
-        @keyframes blink {
-            0%{
-                opacity: 0;
-            }
-            50%{
-                opacity: 1;
-            }
-            100%{
-                opacity: 0;
-            }
-        }
-
-        body {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 18px;
-        }
-
-        #top {
-            height: 100vh;
-            width: 100vw;
-            /* background: black; */
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-        }
-
-        #top img {
-            width: 300px;
-            /* margin: auto; */
-        }
-
-        #top h3 {
-            visibility: hidden;
-            /* margin: 0 auto; */
-            color: white;
-            font-weight: normal;
-            /* font-family: Arial, Helvetica, sans-serif; */
-            font-family: Courier New, Courier, monospace;
-        }
-
-        .grad {
-            background: linear-gradient(0deg, #FFA400 5%, #C83950 100%);
-            background-size: 400% 400%;
-
-            -webkit-animation: SunhacksSunset 50s ease infinite;
-            -moz-animation: SunhacksSunset 50s ease infinite;
-            animation: SunhacksSunset 50s ease infinite;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .grad h3 {
-            visibility: visible !important;
-            /* margin-top: 0; */
-        }
-
-        #cta {
-            color: white;
-            width: 300px;
-            font-family: Courier New, Courier, monospace;
-        }
-
-        #cta a {
-            color: white;
-            padding: 3px;
-            margin-left: 32.5px;
-        }
-
-        #cta a.cli {
-            background: rgba(0, 0, 0, 0.527);
-            text-decoration: none;
-            margin-left: 0;
-        }
-
-        .cli::after {
-            content: " █";
-            /* text-decoration: none !important; */
-            animation: blink 1s ease infinite;
-        }
-
-        .cli::before {
-            content: "~$ ";
-            /* text-decoration: none !important; */
-            /* animation: blink 1s ease infinite; */
-            margin-left: 0px;
-        }
-        #cta ul {
-            padding: 0;
-        }
-
-        #cta li {
-            list-style-type: none;
-            padding: 0;
-        }
-    </style>
     <script>
         var active = 0;
         var links = [];
@@ -154,24 +22,122 @@
     </script>
 </head>
 
-<body>
-    <div id="top" class="grad">
-            <img src="assets/logo-text-white.png" alt="Sun Hacks">
-        <h3 id="date" style="text-align: center;">November 9th - 11th 2018<br/>Student Pavilion, Arizona State University</h3>
+<body> 
+    <div class="parallax-window" data-image-src="./assets/sunhacks-background.png" data-parallax="scroll" id="page-top"> 
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+              <span>sunhacks</span>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#organize">organize</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#sponsors">sponsors</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="home" id="home">
+        <img style="padding-bottom: 19px;" src="assets/logo-text-white.png" alt="Sun Hacks">
+        <h3 id="date" style="text-align: center; padding-bottom: 15px;">November 9th - 11th 2018<br/>Student Pavilion, Arizona State University</h3>
         <div id="cta" style="text-align: center;">
             <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
-            <ul >
-                <li> 
-                	<a id="hack" href="https://docs.google.com/forms/d/e/1FAIpQLSfGW0-BLB5iSZm5yYEzZvnjOy35StDwUptKGA67S4deMRsiaQ/viewform" target="_blank" onmouseover="turnOn(0)">Hack</a>
-                </li>
-                <li>
-                    <a id="organize" href="https://docs.google.com/forms/d/e/1FAIpQLSeeFxvb_KkJFCkv7_GH6WxJRvA9aj09fZkv0eb8nbh93pW0Ow/viewform?usp=sf_link" target="_blank" onmouseover="turnOn(1)">Organize</a>
-                </li>
-                <li>
-                    <a id="sponsor" href="mailto:industry@sunhacks.io" target="_top" onmouseover="turnOn(2)">Sponsor</a>
-                </li>
-            </ul>
+          <ul >
+            <li> 
+              <a id="hack" href="https://docs.google.com/forms/d/e/1FAIpQLSfGW0-BLB5iSZm5yYEzZvnjOy35StDwUptKGA67S4deMRsiaQ/viewform" target="_blank" onmouseover="turnOn(0)">Hack</a>
+            </li>
+            <li>
+              <a id="organize" href="https://docs.google.com/forms/d/e/1FAIpQLSeeFxvb_KkJFCkv7_GH6WxJRvA9aj09fZkv0eb8nbh93pW0Ow/viewform?usp=sf_link" target="_blank" onmouseover="turnOn(1)">Organize</a>
+            </li>
+            <li>
+              <a id="sponsor" href="mailto:industry@sunhacks.io" target="_top" onmouseover="turnOn(2)">Sponsor</a>
+            </li>
+          </ul>
         </div>
+      </section>
+      <section class="organize" id="organize">
+        <div class="container">
+          <div class="section-header">
+            <h1 class="organize-header">organize</h1>
+          </div>
+          <div class="section-content">
+            <p class="plain">
+              "plz help us. i need help. plz. help."
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="hack" id="hack">
+        <div class="container"> 
+          <div class="section-header">
+            <h1 class="hack-header">hackers</h1>
+          </div>
+          <div class="section-content">
+            <p class="plain">
+              "wanna hack? registration opens October 1st. antsy? fill out this form and give us ur email. we'll email u when registration goes live"
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sponsors" id="sponsors">
+      </section>
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <h1 class="faq-header">frequently asked questions</h1>
+          </div>
+          <div class="section-content">
+            <div class="row">
+              <div class="faq-col">
+                <div>
+                  <h3>Who can attend? <span class="plus">+</span></h3>
+                  <p class="answer">If you're a student and at least 18 years old, you're more than welcome to come participate!</p>
+                </div>
+                <div>
+                  <h3>What should I bring? <span class="plus">+</span></h3>
+                  <p class="answer">Hackers will need to bring a valid student ID for admission, a government issued photo ID for borrowing hardware, and a Laptop or Desktop for hacking. Hackers are also more than welcome to bring sleeping bags, pillows, etc. Don't forget to consider toiletries and other basic amenities.</p>
+                </div>
+              </div>
+              <div class="faq-col">
+                <div>
+                  <h3>How do teams work? <span class="plus">+</span></h3>
+                  <p class="answer">Teams will consist of a max of 4 members. If you're coming without teammates, don't worry. We'll be setting up an event at the beginning of the hackathon for hackers to mingle and create teams!</p>
+                </div>
+                <div>
+                  <h3>How much is admission? <span class="plus">+</span></h3>
+                  <p class="answer">Admission is free of charge! Attendees will also receive free food, drinks, and tons of swag!</p>
+                </div>
+                <div>
+                  <h3>What are the rules? <span class="plus">+</span></h3>
+                  <p class="answer">As a Major League Hacking member event, we require all attendees to follow Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> .</p>
+                </div>
+              </div>
+              <div class="faq-col">
+                <div>
+                  <h3>What if I'm a beginner? <span class="plus">+</span></h3>
+                  <p class="answer">Every hacker needs to start somewhere! There will be workshops, tech talks, and mentors on board to help you dive into the world of hacking and learn something new.</p>
+                </div>
+                <div>
+                  <h3>What about hardware hacks? <span class="plus">+</span></h3>
+                  <p class="answer">MLH will be generously renting out cutting edge technology to the hackers. From Oculus Rifts to Arduinos, the sky is the limit. Intel will also be sponsoring their own hardware, including spider bots. If you have hardware or tools, you are more than welcome to bring them as well.</p>
+                </div>
+              </div>
+            </div>
+          </div><!--end of section content-->
+        </div>
+      </section>
     </div>
     <script>
         links = [
@@ -186,6 +152,11 @@
             }
         }
     </script>
-</body>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
 
 </html>
