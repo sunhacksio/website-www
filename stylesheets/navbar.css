@@ -78,7 +78,7 @@ body {
   background-image: url('../assets/bg-noclouds.png');
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Raleway", sans-serif;
+  font-family: Courier New, Courier, monospace;
   text-align: center; }
 
 .apply {
@@ -177,6 +177,7 @@ a.dh-button:link {
   text-align: left; }
   .section-header h1 {
     position: relative;
+    font-family: "Axis", sans-serif;
     top: 40px;
     left: -30px;
     color: #faf8f3;
@@ -184,16 +185,23 @@ a.dh-button:link {
     padding: 7px 20px 0; }
 
 .organize {
-  min-height: 100vh;
-  position: relative;
+  box-sizing: content-box;
+  height: max-content;
+  padding-bottom: 60px;
 }
 
 .organize-header {
- background-color: #fad278;
+ background-color: #ee375b;
 }
 
 .hack-header {
-  background-color: black;
+  background-color: #ee375b;
+}
+
+.hack {
+  box-sizing: content-box;
+  height: max-content;
+  padding-bottom: 60px; 
 }
 
 
@@ -206,7 +214,7 @@ a.dh-button:link {
   text-align: justify; }
 
 .about-header {
-  background-color: #fad278; }
+  background-color: #ee375b; }
 
 .schedule .section-content h1 {
   font-size: 24px; }
@@ -218,7 +226,7 @@ a.dh-button:link {
     color: black; }
 
 .schedule-header {
-  background-color: #63a9b3; }
+  background-color: #ee375b; }
 
 .faq-header {
   background-color: #ee375b; }
@@ -267,16 +275,18 @@ span.plus {
 
 
 .sponsors {
-  padding-bottom: 200px; }
+  box-sizing: content-box;
+  height: max-content;
+  padding-bottom: 60px; 
+}
   .sponsors .section-content {
     padding-bottom: 5px;
-    padding-top: 30px; }
+    padding-top: 30px; 
+  }
 
-.godaddy {
-  padding-bottom: 10px; }
 
-.sponsors-header {
-  background-color: #99cd76; }
+.sponsor-header {
+  background-color: #ee375b; }
 
 .sponsor-row {
   padding: 10px;
@@ -285,23 +295,23 @@ span.plus {
 img.logo {
   margin-top: 30px; }
 
-.diamond .logo {
+.sun .logo {
   max-height: 150px;
   max-width: 600px; }
 
-.turquoise .logo {
+.planet .logo {
   max-height: 130px;
   max-width: 200px; }
 
-.quartz .logo {
+.moon .logo {
   max-height: 90px;
   max-width: 180px; }
 
-.pyrite .logo {
+.asteroid .logo {
   max-height: 60px;
   max-width: 160px; }
 
-.clay .logo {
+.comet .logo {
   max-height: 60px;
   max-width: 160px; }
 
@@ -318,11 +328,11 @@ footer {
   background-color: #994033;
   color: #faf8f3;
   font-size: 16px;
-  height: 300px;
+  height: 150px;
   z-index: 2; }
 
 .footer {
-  padding-top: 120px; }
+  padding-top: 20px; }
 
 .social {
   padding-bottom: 20px; }

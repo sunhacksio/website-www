@@ -36,7 +36,7 @@ body {
     /* margin: 0 auto; */
     color: white;
     font-weight: normal;
-    font-size: 1.25rem;
+    font-size: 2rem;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: Courier New, Courier, monospace;
 }
@@ -84,7 +84,7 @@ section h1 {
   margin-bottom: 20px; 
 }
 .plain {
-  font-size: 1.4em; 
+  font-size: 1.1em; 
   margin: 0; 
   padding: 20px 75px; 
   text-align: justify; 

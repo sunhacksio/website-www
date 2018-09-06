@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
 
 <head>
     <meta charset="UTF-8">
@@ -11,16 +11,9 @@
     <link rel="stylesheet" href="./stylesheets/navbar.css">
     <title>sunhacks</title>
     <script>
-        var active = 0;
-        var links = [];
-        function turnOn(index) {
-            links[active].className = "";
-            links[index].className = "cli";
-            active = index;
-            // console.debug("turning on");
-            // document.getElementById("top").className = "grad";
-        }
+       
     </script>
+    <script src="https://use.fontawesome.com/fcc0eeca8c.js"></script>
 </head>
 
 <body> 
@@ -44,7 +37,13 @@
                 <a class="nav-link page-scroll" href="#organize">organize</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link page-scroll" href="#hack">hackers</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link page-scroll" href="#sponsors">sponsors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#faq">faq</a>
               </li>
             </ul>
           </div>
@@ -53,20 +52,6 @@
       <section class="home" id="home">
         <img style="padding-bottom: 19px;" src="assets/logo-text-white.png" alt="Sun Hacks">
         <h3 id="date" style="text-align: center; padding-bottom: 15px;">November 9th - 11th 2018<br/>Student Pavilion, Arizona State University</h3>
-        <div id="cta" style="text-align: center;">
-            <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
-          <ul >
-            <li> 
-              <a id="hack" href="https://docs.google.com/forms/d/e/1FAIpQLSfGW0-BLB5iSZm5yYEzZvnjOy35StDwUptKGA67S4deMRsiaQ/viewform" target="_blank" onmouseover="turnOn(0)">Hack</a>
-            </li>
-            <li>
-              <a id="organize" href="https://docs.google.com/forms/d/e/1FAIpQLSeeFxvb_KkJFCkv7_GH6WxJRvA9aj09fZkv0eb8nbh93pW0Ow/viewform?usp=sf_link" target="_blank" onmouseover="turnOn(1)">Organize</a>
-            </li>
-            <li>
-              <a id="sponsor" href="mailto:industry@sunhacks.io" target="_top" onmouseover="turnOn(2)">Sponsor</a>
-            </li>
-          </ul>
-        </div>
       </section>
       <section class="organize" id="organize">
         <div class="container">
@@ -75,7 +60,7 @@
           </div>
           <div class="section-content">
             <p class="plain">
-              "plz help us. i need help. plz. help."
+              If you're interested in being an organizer, please fill out <a id="organize" href="https://docs.google.com/forms/d/e/1FAIpQLSeeFxvb_KkJFCkv7_GH6WxJRvA9aj09fZkv0eb8nbh93pW0Ow/viewform?usp=sf_link" target="_blank">this form</a>
             </p>
           </div>
         </div>
@@ -87,12 +72,43 @@
           </div>
           <div class="section-content">
             <p class="plain">
-              "wanna hack? registration opens October 1st. antsy? fill out this form and give us ur email. we'll email u when registration goes live"
+              wanna hack? registration opens October 1st. antsy? fill out this form and give us ur email. we'll email u when registration goes live <a id="hack" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfGW0-BLB5iSZm5yYEzZvnjOy35StDwUptKGA67S4deMRsiaQ/viewform" target="_blank">Hack</a>
             </p>
           </div>
         </div>
       </section>
       <section class="sponsors" id="sponsors">
+          <div class="container"> 
+            <div class="section-header"> 
+              <h1 class="sponsor-header">sponsors</h1>
+            </div>
+            <div class="section-content"> 
+              <div class="row sponsor-row">
+                <div class="sun">
+                </div>
+              </div>
+              <div class="row sponsor-row">
+                <div class="planet">
+                </div>
+              </div>
+              <div class="row sponsor-row">
+                <div class="moon">
+                  <a class="col-sm-offset-4 col-sm-4" href="https://www.godaddy.com" target="_blank"><img class="logo" src="./assets/sponsors/godaddy.png" style="margin-top: 50px;"></a>
+                </div>
+              </div>
+              <div class="row sponsor-row">
+                <div class="asteroid">
+                  <a class="col-sm-offset-4 col-sm-4" href="https://www.workiva.com/" target="_blank"><img class="logo" src="./assets/sponsors/workiva.png"></a>
+                </div>
+              </div>
+              <div class="row sponsor-row">
+                <div class="comet">
+                  <a class="col-sm-offset-4 col-sm-4" href="http://www.agjunction.com/" target="_blank"><img class="logo" src="./assets/sponsors/agjunction.svg" style="margin-top: 50px;"></a>
+                </div>
+              </div>
+              <p class="plain" style="text-align: center;">
+              Thank you so much to our sponsors who help make sunhacks possible! <br/>Interested in sponsoring? Please email <a href="mailto://industry@sunhacks.io">industry@sunhacks.io</a> 
+              </p>
       </section>
       <section class="faq" id="faq">
         <div class="container">
@@ -101,20 +117,10 @@
           </div>
           <div class="section-content">
             <div class="row">
-              <div class="faq-col">
+               <div class="faq-col">
                 <div>
                   <h3>Who can attend? <span class="plus">+</span></h3>
                   <p class="answer">If you're a student and at least 18 years old, you're more than welcome to come participate!</p>
-                </div>
-                <div>
-                  <h3>What should I bring? <span class="plus">+</span></h3>
-                  <p class="answer">Hackers will need to bring a valid student ID for admission, a government issued photo ID for borrowing hardware, and a Laptop or Desktop for hacking. Hackers are also more than welcome to bring sleeping bags, pillows, etc. Don't forget to consider toiletries and other basic amenities.</p>
-                </div>
-              </div>
-              <div class="faq-col">
-                <div>
-                  <h3>How do teams work? <span class="plus">+</span></h3>
-                  <p class="answer">Teams will consist of a max of 4 members. If you're coming without teammates, don't worry. We'll be setting up an event at the beginning of the hackathon for hackers to mingle and create teams!</p>
                 </div>
                 <div>
                   <h3>How much is admission? <span class="plus">+</span></h3>
@@ -122,7 +128,17 @@
                 </div>
                 <div>
                   <h3>What are the rules? <span class="plus">+</span></h3>
-                  <p class="answer">As a Major League Hacking member event, we require all attendees to follow Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a> .</p>
+                  <p class="answer">As a Major League Hacking member event, we require all attendees to follow Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>.</p>
+                </div>
+              </div>
+              <div class="faq-col">
+                <div>                  
+                  <h3>How do teams work? <span class="plus">+</span></h3>
+                  <p class="answer">Teams will consist of a max of 4 members. If you're coming without teammates, don't worry. We'll be setting up an event at the beginning of the hackathon for hackers to mingle and create teams!</p>
+                </div>
+                <div>
+                  <h3>What should I bring? <span class="plus">+</span></h3>
+                  <p class="answer">Hackers will need to bring a valid student ID for admission, a government issued photo ID for borrowing hardware, and a Laptop or Desktop for hacking. Hackers are also more than welcome to bring sleeping bags, pillows, etc. Don't forget to consider toiletries and other basic amenities.</p>
                 </div>
               </div>
               <div class="faq-col">
@@ -132,24 +148,33 @@
                 </div>
                 <div>
                   <h3>What about hardware hacks? <span class="plus">+</span></h3>
-                  <p class="answer">MLH will be generously renting out cutting edge technology to the hackers. From Oculus Rifts to Arduinos, the sky is the limit. Intel will also be sponsoring their own hardware, including spider bots. If you have hardware or tools, you are more than welcome to bring them as well.</p>
+                  <p class="answer">MLH will be generously renting out cutting edge technology to the hackers. From Oculus Rifts to Arduinos, the sky is the limit. If you have hardware or tools, you are more than welcome to bring them as well.</p>
                 </div>
               </div>
             </div>
           </div><!--end of section content-->
         </div>
       </section>
+      <br />
+      <br />
+      <footer>
+        <div class="container footer">
+          <div class="row social">
+            <a href="https://www.facebook.com/sunhacksofficial/" target="_blank"><i class="fa fa-facebook-square"></i></a> <a href="https://twitter.com/sun_hacks" target="_blank"><i class="fa fa-twitter"></i></a><a target="_blank" href="https://www.instagram.com/sunhacksofficial/"><i class="fa fa-instagram"></i></a><a href="mailto:team@sunhacks.io"><i class="fa fa-envelope"></i></a>
+          </div>
+          <p>Made with &#9829; by the sunhacks team</p>
+        </div>
+      </footer>
     </div>
     <script>
         links = [
             hack, organize, sponsor
         ]
         turnOn(0);
+        correctKeys = 1; 
         document.onkeydown = function(event){
-            if(event.keyCode==38&&active>0){
-                turnOn(active-1);
-            } else if(event.keyCode == 40 && active < 4){
-                turnOn(active + 1);
+            if(event.keyCode==38) {
+              // change the event.keyCode to check for cool key things . kunami code. desert hacks, sw hacks, etc. 
             }
         }
     </script>
