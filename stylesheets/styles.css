@@ -1,6 +1,6 @@
 p {
   font-size: 14px; 
-  font-weight: bold;}
+}
 
 
 .navbar-default .navbar-toggle {
@@ -75,8 +75,7 @@ ul.nav a.active {
   width: 100%; }
 
 body {
-  font-family: Courier New, Courier, monospace;
-  font-weight: bold;
+  font-family: "Raleway", sans-serif;
   text-align: center; }
 
 .apply {
@@ -403,7 +402,6 @@ section h1 {
 }
 .plain {
   font-size: 1em; 
-  font-weight: bold;
   margin: 0; 
   padding: 20px 75px; 
   text-align: justify; 
