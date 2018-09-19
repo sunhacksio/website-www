@@ -94,7 +94,8 @@ body {
 
 
 a.sh-button:link {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #fff; }
 
 .sh-button {
   background-color: #ff9089;
@@ -147,13 +148,13 @@ a.sh-button:link {
     display: inline-block;
     padding: 7px 20px 9px 20px; }
 
-.organize {
+.volunteer {
   box-sizing: content-box;
   height: max-content;
   padding-bottom: 60px;
 }
 
-.organize-header {
+.volunteer-header {
  background-color: #ff9089;
 }
 
