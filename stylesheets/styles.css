@@ -168,6 +168,17 @@ a.sh-button:link {
   padding-bottom: 60px; 
 }
 
+.mentor-header {
+  background-color: #ff9089;
+}
+
+.mentor {
+  box-sizing: content-box;
+  height: max-content;
+  padding-bottom: 60px; 
+}
+
+
 
 .about {
   box-sizing: content-box;
