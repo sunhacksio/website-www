@@ -276,12 +276,12 @@ img.logo {
   max-width: 600px; }
 
 .planet .logo {
-  max-height: 130px;
-  max-width: 400px; }
+  max-height: 170px;
+  max-width: 450px; }
 
 .moon .logo {
-  max-height: 100px;
-  max-width: 280px; }
+  max-height: 90px;
+  max-width: 270px; }
 
 .asteroid .logo {
   max-height: 80px;
