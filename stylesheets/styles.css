@@ -232,7 +232,7 @@ a.sh-button:link {
   float: left;
   padding: 0 40px 20px;
   text-align: left;
-  width: 50%; }
+  width: 33%; }
 
 span.plus {
   display: none;
@@ -336,6 +336,10 @@ footer {
     100%{
         opacity: 0;
     }
+}
+
+td {
+  padding:3px;
 }
 
 body {
