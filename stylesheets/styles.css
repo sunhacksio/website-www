@@ -113,7 +113,11 @@ a.sh-button:link {
   margin: 10px 15px 0 0;
   outline: 0;
   transition: all 0.23s ease-in-out 0s;
-  width: 192px; }
+  width: 192px; 
+  left: 50%;
+  position: absolute;
+  top: 90%;
+  transform: translate(-50%, -50%);}
 
 .sh-button:hover {
   background-color: #e04861;
@@ -121,9 +125,19 @@ a.sh-button:link {
   cursor: pointer;
   text-decoration: none; }
 
-  .home {
+.video {
   min-height: 100vh;
-  position: relative; }
+  position: relative; }  
+
+.video .container {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.home {
+min-height: 100vh;
+position: relative; }
 
 .home .header {
   left: 50%;
@@ -147,6 +161,17 @@ a.sh-button:link {
     color: #faf8f3;
     display: inline-block;
     padding: 7px 20px 9px 20px; }
+
+.subscribe {
+  box-sizing: content-box;
+  height: max-content;
+  padding-bottom: 60px;
+}
+
+.subscribe-header {
+  background-color: #ff9089;
+}
+    
 
 .volunteer {
   box-sizing: content-box;
