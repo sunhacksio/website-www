@@ -3,9 +3,9 @@ p {
 }
 
 .web-container {
-  background-color: white;
+  background-color: #e6e6e6;
   border-radius: 10px;
-  width: 85%;
+  width: 100%;
 }
 
 .navbar-default .navbar-toggle {
@@ -105,7 +105,6 @@ ul.nav a.active {
 body {
   font-family: "Raleway", sans-serif;
   text-align: center;
-  background-color: #e6e6e6;
 }
 
 .apply {
