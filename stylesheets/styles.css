@@ -3,9 +3,12 @@ p {
 }
 
 .web-container {
+  position: relative;
+  top: -100px;
   background-color: white;
   border-radius: 10px;
   width: 85%;
+  display: inline-block;
 }
 
 .navbar-default .navbar-toggle {
