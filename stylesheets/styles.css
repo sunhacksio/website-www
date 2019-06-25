@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 
 .main-jumbotron {
-    background-image: url(/assets/sunhacks-background.png);
+    background-image: url(../assets/sunhacks-background.png);
     background-size: cover;
     background-position: center;
 
@@ -14,12 +14,53 @@
 
 .main-jumbotron-container {
     flex-grow: 1;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
+
+.main-jumbotron-spacer {
+    flex-grow: 1;
+}
+.main-jumbotron-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .main-jumbotron-text-container * {
+        text-align: center !important;
+    }
+    .main-jumbotron-container {
+        align-items: center;
+    }
+    .main-jumbotron-image {
+        width: 150px;
+    }
+    .main-jumbotron-spacer {
+        flex-grow: 0;
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .main-jumbotron-image {
+        width: 250px;
+    }
+    .main-jumbotron-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        flex-direction: row-reverse;
+
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+
+    }
+}
+
 
 .main-jumbotron-container h1 {
     margin: 0px;
@@ -108,6 +149,18 @@ footer {
     margin: 10px;
 }
 
+.fa {
+    color: inherit;
+    will-change: color;
+    cursor: pointer;
+    transition: color 0.25s cubic-bezier(0,0,0.3,1);
+}
+
+.fa:hover {
+    text-decoration: none;
+    color: #ff9089;
+}
+
 .footer-text {
     color: #d6d6d6;
 }
@@ -120,7 +173,7 @@ footer {
 }
 
 .footer-heart:hover {
-
+    text-decoration: none;
     color: #ff9089;
 }
 
@@ -144,7 +197,7 @@ footer {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ff9089;
+  background-color: #777;
 }
 
 .navbar {
@@ -158,7 +211,7 @@ footer {
 
 .navbar-default .navbar-nav > li > a {
   border-bottom: 0 solid transparent;
-  color: #ff9089;
+  color: #777;
   font-size: 18px;
   -webkit-transition: border 0.3s ease-in-out, color 0.3s ease-in-out,
     padding 0.3s ease-in-out;
@@ -179,18 +232,18 @@ ul.nav a {
 .navbar-default .navbar-nav > li > a:active,
 ul.nav a.active:hover {
   background-color: transparent;
-  border-color: #994033;
-  color: #994033;
+  border-color: #ff9089;
+  color: #ff9089;
 }
 
 ul.nav a.active {
-  border-bottom: 5px solid #994033;
-  color: #994033;
+  border-bottom: 5px solid #ff9089;
+  color: #ff9089;
   padding-bottom: 15px !important;
 }
 
 .top-nav-collapse {
-  background-color: hsla(42, 100%, 88%, 0.45);
+  background-color: hsla(45, 100%, 64%, 0.65);
   border: 0;
   padding: 0;
 }
@@ -257,6 +310,7 @@ a.sh-button:link {
 }
 
 .sh-button {
+  text-align: center;
   background-color: #ff9089;
   border: 0;
   -moz-border-radius: 3px;
@@ -271,18 +325,20 @@ a.sh-button:link {
   line-height: 48px;
   margin: 10px 15px 0 0;
   outline: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: all 0.23s ease-in-out 0s;
   width: 192px;
   left: 50%;
   position: absolute;
-  top: 90%;
+  top: 80%;
   transform: translate(-50%, -50%);
 }
 
 .sh-button:hover {
   background-color: #e04861;
   color: #fff;
-  cursor: pointer;
+  /* cursor: pointer; */
   text-decoration: none;
 }
 
@@ -627,6 +683,18 @@ section h1 {
   margin: 0;
   padding: 20px 75px;
   text-align: justify;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    .row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 }
 
 @media (max-width: 479px) {
