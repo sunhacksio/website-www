@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 
 .main-jumbotron {
-    background-image: url(../assets/sunhacks-background.png);
+    background-image: url(../assets/background.svg);
     background-size: cover;
     background-position: center;
 
