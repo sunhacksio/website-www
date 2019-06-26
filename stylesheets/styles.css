@@ -31,6 +31,9 @@
 }
 
 @media (max-width: 768px) {
+    .sh-button {
+        margin: 0 auto;
+    }
     .main-jumbotron-text-container * {
         text-align: center !important;
     }
@@ -313,26 +316,16 @@ a.sh-button:link {
   text-align: center;
   background-color: #ff9089;
   border: 0;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  box-sizing: border-box;
-  color: #fff;
-  display: inline-block;
   font-size: 19px;
   height: 48px;
   letter-spacing: 0.03em;
   line-height: 48px;
-  margin: 10px 15px 0 0;
-  outline: 0;
   padding-left: 10px;
   padding-right: 10px;
   transition: all 0.23s ease-in-out 0s;
   width: 192px;
   left: 50%;
-  position: absolute;
-  top: 80%;
-  transform: translate(-50%, -50%);
 }
 
 .sh-button:hover {
@@ -351,7 +344,7 @@ a.sh-button:link {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .home {
@@ -363,7 +356,7 @@ a.sh-button:link {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .section-content {
