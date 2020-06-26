@@ -1,253 +1,397 @@
-<!DOCTYPE html>
-<html lang="en" style="overflow-x: hidden; min-width: 100%!important;">
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sketch-js@1.1.3/js/sketch.min.js"></script>
+  <style>
+  html, body {
+    overflow: hidden;
+    text-align: center;
+  }
+  canvas {
+    background: #1a1a3e;
+    margin: 0;
+    display: block;
+    position: relative;
+    left: 0;
+    top:0;
+    z-index: -1 !important;
+  }
+  .foreground {
+    margin: 0;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  .hero-body {
+    margin-bottom: 20vh;
+  }
+  .has-text-white {
+    color: #fffefd !important
+  }
+  .has-text-blue {
+    color: #1a1a3e !important
+  }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" href="small-yellow-sun.png">
-        <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
-        <link rel="stylesheet" href="./stylesheets/styles.css">
+  .footbutton, a.coc{
+    color: #1a1a3e !important;
+    background: none;
+    border: none;
+  }
+  .footbutton:hover, a.coc:hover{
+    color: #7188a3 !important
+  }
 
-        <title>sunhacks</title>
-        <script src="https://use.fontawesome.com/fcc0eeca8c.js"></script>
-        <!-- for facebook -->
-        <meta property="og:url"                content="http://www.sunhacks.io" />
-        <meta property="og:type"               content="website"/>
-        <meta property="og:title"              content="sunhacks 2019"/>
-        <meta property="og:description"        content="Get ready for a weekend of building at #sunhacks2019 on September 20th to 22nd!"/>
-        <meta property="og:image"              content="http://sunhacks.io/assets/fb_box.png"/>
-        <!-- for twitter -->
-        <meta content="summary" name="twitter:card">
-        <meta content="@Sun_hacks" name="twitter:site">
-        <meta content="sunhacks 2019" name="twitter:title">
-        <meta content="Get ready for a weekend of building at #sunhacks2019 on September 20th to 22nd!" name="twitter:description">
-        <meta content="http://sunhacks.io/assets/sunhacks_icon_web.jpg" name="twitter:image">
-    </head>
+  .subscribe {
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+  }
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">
-                        <span>sunhacks</span>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavBar">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#about">about</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#faq">faq</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#sponsors">sponsors</a>
-                        </li>
-                    </ul>
-                </div>
+  .is-blue {
+    background-color: #7188a3;
+    border: none;
+  }
+
+  .is-dark-blue {
+    background-color: #1a1a3e;
+    border: none;
+  }
+
+  .notification {
+    margin: 0 auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+</style>
+
+</head>
+<body>
+  <div id="modal-subscribe" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head is-dark-blue">
+        <p class="modal-card-title has-text-white">sunhacks updates</p>
+      </header>
+      <section class="modal-card-body is-blue">
+        <form action="https://sendy.sunhacks.io/subscribe" method="POST" accept-charset="utf-8" id="sendy-subscribe">
+        <div class="content">
+            <div class="field ">
+              <label for="name" class="label has-text-white">name</label>
+              <div class="control">
+                <input class="input" name="name" id="name" type="text" placeholder="e.g sunny">
+              </div>
             </div>
-        </nav>
-        <!-- MLH style has been moved to styles.css, don't forget to update this every year we're an MLH event! -->
-        <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
-
-        <div class="jumbotron main-jumbotron" id="page-top">
-            <div class="container main-jumbotron-container">
-                <img class="main-jumbotron-image" src="assets/logo-white.png" alt="sunhacks">
-                <div class="main-jumbotron-spacer"></div>
-                <div class="main-jumbotron-text-container">
-                    <strong class="text-uppercase">Get ready to hack at sunhacks 2019!</strong>
-                    <h1>September 20th&ndash;22nd 2019</h1>
-                    <h2>Sun Devil Fitness Complex Tempe,<br/>Arizona State University</h2>
-                    <div class="main-jumbotron-text-button">
-                        <a class="sh-button" href="https://live.sunhacks.io/" id="hackbutton" name="hackbutton">Live Site</a>
-                    </div>
-                </div>
-
+            <div class="field">
+              <label for="email" class="label has-text-white">email</label>
+              <div class="control">
+                <input class="input " name="email" id="email" type="email" placeholder="e.g. team@sunhacks.io">
+              </div>
             </div>
+            <input type="hidden" name="list" value="yiooYZNkTMLIzm763Z763NZilQ"/>
         </div>
+      </form>
+      </section>
+      <footer class="modal-card-foot is-dark-blue">
+        <button form="sendy-subscribe"type="submit" name="submit" id="submit" class="button is-blue has-text-white">submit</button>
+        <button class="button" onclick="document.getElementById('modal-subscribe').classList.remove('is-active');">cancel</button>
+      </footer>
+    </div>
+  </div>
 
+  <section class="hero is-fullheight foreground">
+    <div class="hero-head">
+    <header class="navbar has-text-centered" style="justify-items:center;">
+      <div class="notification" id="success-subscribe" style="visibility:hidden">
+        <button class="delete"></button>
+        Thanks for subscribing! We're looking forward to (virtually) seeing you soon!
+      </div>
+  </header>
+</div>
 
-        <div class="main-content">
-            <main>
-                <section>
-                    <h3 class="text-uppercase"><strong>Check out our last sunhacks!</strong></h3>
-
-                    <br/>
-                    <iframe class="video-embed" src="https://www.youtube.com/embed/dbvVf-bMLCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-                </section>
-
-                <section id="about">
-                    <div class="section-header">
-                        <h1 class="about-header">about us</h1>
-                    </div>
-                    <p class="text-left">
-                        sunhacks is a student-run hackathon at Arizona State University committed to growing the local tech community,
-                        providing students with brand new opportunities and connections, and contributing to a world-wide community:
-                        the hacker community. Our vision is to bring people of all backgrounds together to develop skills together as
-                        they learn, build, and code here at sunhacks.
-                    </p>
-                </section>
-
-                <section class="faq" id="faq">
-                        <div class="section-header">
-                            <h1 class="faq-header">frequently asked questions</h1>
-                        </div>
-                        <div class="section-content">
-                            <div class="row">
-                                <div class="faq-col">
-                                    <div>
-                                        <h3>What is a hackathon? <span class="plus">+</span></h3>
-                                        <p class="answer">Hackathons are places where you can have many unique experiences. You can watch
-                                        you and your team's project come to life throughout a weekend, network with sponsors in a
-                                        much more casual environment than career fair, meet new friends and learn about the present
-                                        tech community, and learn cool new tech that industry is thrilled to hear about!
-                                        Come up with a project, or join a team, and make the coolest invention you've come up with yet!</p>
-                                    </div>
-                                    <div>
-                                        <h3>Can I attend? <span class="plus">+</span></h3>
-                                        <p class="answer">If you're a student and at least 18 years old, please come hack with us!</p>
-                                    </div>
-                                    <div>
-                                        <h3>Code of Conduct? <span class="plus">+</span></h3>
-                                        <p class="answer">As a Major League Hacking member event, we require all attendees (hackers, volunteers,
-                                        mentors, sponsors, etc) to follow Major League Hacking’s <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>.</p>
-                                    </div>
-                                    <div>
-                                        <h3>What time do I need to be there? <span class="plus">+</span></h3>
-                                        <p class="answer">
-                                            Check in opens at 5:00 PM on Friday, September 20th, the opening ceremony will be at 7:00 pm. For leaving, closing ceremony will be held on Sunday, September 22nd and is expected to end by 12:15 PM. The projects demo fair will be held in the morning starting at 9:00 AM. A more detailed schedule of events will be posted closer to the event.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h3>Can I get travel reimbursement? <span class="plus">+</span></h3>
-                                        <p class="answer">We unfortunately do not yet have the funds to reimburse our attendees for their travel. We sincerely apologize, but hope you understand.
-                                        In the future when we're bigger, we hope to be able to help you out, so stay tuned!</p>
-                                    </div>
-                                    <div>
-                                        <h3>Find yourself having these thoughts? "I'm not good enough." "I don't know how to code"? <span class="plus">+</span></h3>
-                                        <p class="answer">sunhacks exists to help combat those thoughts. We're working on building a community that people especially
-                                        like you can be a part of. We want to help you defy those thoughts, find that network of support, and flourish! We focus on
-                                        addressing these concerns by providing introductory workshops, encouraging mentors to interact with all hackers, and creating
-                                        a positive environment.</p>
-                                    </div>
-                                    <div>
-                                        <h3>How do teams work? <span class="plus">+</span></h3>
-                                        <p class="answer">The max team size is 4, but the minimum team size is one (meaning yes, you can work by yourself).
-                                        We'd encourage you to work in a team so you can have people to learn from, bounce ideas off of, and break work down into manageable chunks! </p>
-                                    </div>
-                                </div>
-                                <div class="faq-col">
-                                    <div>
-                                        <h3>What if I don't have a team?<span class="plus">+</span></h3>
-                                        <p class="answer">Don't have a team? That's okay, after our opening ceremony, stick around to find some team members
-                                        who want to help you with your project—or maybe you want to help them with theirs! We have activities planned to help
-                                        you find your dream team.</p>
-                                    </div>
-                                    <div>
-                                        <h3>What about hardware hacks? <span class="plus">+</span></h3>
-                                        <p class="answer">MLH will be generously renting out cutting edge technology to the hackers. From Oculus Rifts to Arduinos,
-                                        the sky is the limit. If you have hardware or tools, you are more than welcome to bring them as well.</p>
-                                    </div>
-                                    <div>
-                                        <h3>What will be provided?  <span class="plus">+</span></h3>
-                                        <p class="answer">The entire weekend is free! That means free food, free snacks, free swag, and a ton of hardware for you to check out and work with. Bring yourself and whatever you need to be successful!</p>
-                                    </div>
-                                    <div>
-                                        <h3>What do I need to bring?  <span class="plus">+</span></h3>
-                                        <p class="answer">You'll need to bring a laptop, charger, any tech you might want to hack on or with. As we are a 3 day hackathon,
-                                        we encourage you to bring toiletries and any other materials you deem relevant. We highly encourage you bring sleeping paraphernalia
-                                        to ensure you get a good night's rest each night (or not, we understand you're excited to hack, but remember to take care of yourself!).
-                                        We will have a sleeping area designated and showers will be provided! <br />In addition, sunhacks is working toward becoming a sustainable hackathon, that means
-                                        we aren't providing water bottles this year, and are asking that you bring your own.</p>
-                                    </div>
-                                    <div>
-                                        <h3>Do I need to stay the whole time? <span class="plus">+</span></h3>
-                                        <p class="answer">To get the full hackathon experience we highly recommend you stay, but we understand if you need to leave
-                                        (or if you want to sleep in a real bed for the night).</p>
-                                    </div>
-                                    <div>
-                                        <h3>My question wasn't answered :( <span class="plus">+</span></h3>
-                                        <p class="answer">Please reach out to <a href="mailto:team@sunhacks.io" target="_blank">team@sunhacks.io</a>!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-
-                <section class="sponsors" id="sponsors">
-                        <div class="section-header">
-                            <h1 class="sponsor-header">sponsors</h1>
-                        </div>
-                        <div class="section-content">
-                            <div class="row sponsor-row">
-                                <div class="sun">
-                                    <a class="col-sm-12" href="https://entrepreneurship.engineering.asu.edu/devils-invent1/" target="_blank"><img class="logo" src="./assets/sponsors/devils_invent.png" alt="Devils Invent"></a>
-                                    <!-- <a class="col-sm-12" href="https://entrepreneurship.engineering.asu.edu/devils-invent1/" target="_blank"><img class="logo" src="./assets/sponsors/fulton.png" alt="Devils Invent"></a> -->
-                                </div>
-                            </div>
-                            <div class="row sponsor-row">
-                                <div class="planet">
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://amazon.com/" target="_blank"><img class="logo" src="./assets/sponsors/amazon.png" alt="Amazon Tempe Software Development Centers"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://esri.com/" target="_blank"><img class="logo" src="./assets/sponsors/esri.png" alt="Esri"></a>
-                                </div>
-                            </div>
-                            <div class="row sponsor-row">
-                                <div class="moon">
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://www.godaddy.com" target="_blank"><img class="logo" src="./assets/sponsors/godaddy.png" alt="GoDaddy" ></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://www.statefarm.com" target="_blank"><img class="logo" src="./assets/sponsors/statefarm.png" alt="State Farm" ></a>
-                                </div>
-                            </div>
-                            <div class="row sponsor-row">
-                                <div class="asteroid">
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://www.americanexpress.com/" target="_blank"><img class="logo" src="./assets/sponsors/amex.png" alt="American Express"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://www.paypal.com/" target="_blank"><img class="logo" src="./assets/sponsors/paypal.png" alt="Paypal"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://www.psware.com/" target="_blank"><img class="logo" src="./assets/sponsors/performancesoftware.png" alt="Performance Software"></a>
-                                </div>
-                            </div>
-                            <div class="row sponsor-row">
-                                <div class="comet" style="size:50%;">
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://agjunction.com/" target="_blank"><img class="logo" src="./assets/sponsors/agjunction.svg" alt="AgJunction"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://carvana.com/" target="_blank"><img class="logo" src="./assets/sponsors/carvana.svg" alt="Carvana"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://deloitte.com/" target="_blank"><img class="logo" src="./assets/sponsors/deloitte.svg" alt="Deloitte"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://workiva.com/" target="_blank"><img class="logo" src="./assets/sponsors/workiva.png" alt="Workiva"></a>
-                                </div>
-                            </div>
-                            <div class="row sponsor-row">
-                                <div class="comet" style="size:50%;">
-                                    <a class="col-sm-offset-0 col-sm-0" href="http://hackp.ac/mlh-stickermule-hackathons" target="_blank"><img class="logo" src="./assets/sponsors/sticker-mule.svg" alt="Sticker Mule"></a>
-                                    <a class="col-sm-offset-0 col-sm-0" href="https://gen.xyz/" target="_blank"><img class="logo" src="./assets/sponsors/xyz.svg" alt=".xyz"></a>
-                                </div>
-                            </div>
-                            <br/>
-                            <p class="plain" style="text-align: center;">
-                            Thank you so much to our sponsors who help make sunhacks possible! <br/>Interested in sponsoring? Please email <a href="mailto://industry@sunhacks.io">industry@sunhacks.io</a>
-                            </p>
-                </section>
-            </main>
+    <!-- <div class="hero-head">
+      <div class="container">
+        <div class="notification" id="success-subscribe" style="display">
+          <button class="delete"></button>
+          Thanks for subscribing! We're looking forward to (virtually) seeing you soon!
         </div>
-        <footer>
-            <div class="container">
-                <div class="row social">
-                    <a href="https://www.facebook.com/sunhacksofficial/" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/sun_hacks" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/sunhacksofficial/"><i class="fa fa-instagram"></i></a>
-                    <a href="mailto:team@sunhacks.io"><i class="fa fa-envelope"></i></a>
-                </div>
-                <p class="footer-text">Made with <a href="https://github.com/sun-hacks" class="footer-heart">&#9829;</a> by the sunhacks team</p>
-            </div>
-        </footer>
-        <script src="./js/jquery.min.js"></script>
-        <script src="./js/jquery.easing.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/navbar.js"></script>
-    </body>
+      </div>
+    </div> -->
+  	<div class="hero-body is-hidden-touch">
+      <div class="columns is-vcentered" style="margin-left:15vw">
+      	<div class="column is-3" align="center">
+          <figure class="image">
+            <img src="https://sunhacks.io/assets/logo-white.png">
+          </figure>
+      	</div>
+         <div class="column is-5" align="left">
+         	  <h1 class="title is-1 has-text-white">sunhacks</h1>
+    	  	  <h2 class="subtitle is-3 has-text-white">October 9-11, 2020</h2>
+    	  	  <h2 class="subtitle has-text-white">coming to a stream near you</h2>
+            <a class="button subscribe has-text-blue" onclick="document.getElementById('modal-subscribe').classList.add('is-active');" name="subbutton">subscribe for updates</a>
+        </div>
+       </div>
+      </div>
+    </div>
 
+    <div class="hero-body is-hidden-desktop">
+      <div class="container has-text-centered">
+        <figure class="image is-128x128 is-inline-block">
+          <img src="https://sunhacks.io/assets/logo-white.png">
+        </figure>
+        <h1 class="title is-1 has-text-white">sunhacks</h1>
+        <h2 class="subtitle is-3 has-text-white">October 9-11, 2020</h2>
+        <h2 class="subtitle has-text-white">coming to a stream near you</h2>
+        <a class="button subscribe has-text-blue" onclick="document.getElementById('modal-subscribe').classList.add('is-active');" name="subbutton">subscribe for updates</a>
+      </div>
+    </div>
+
+    </div>
+    <div class="hero-foot">
+      <p class="buttons is-centered mb-0 are-large">
+        <a href="https://www.facebook.com/sunhacksofficial/" class="button footbutton">
+          <span class="icon is-large">
+            <i class="fab fa-facebook"></i>
+          </span>
+        </a>
+        <a href="https://twitter.com/sun_hacks" class="button footbutton">
+          <span class="icon is-large">
+            <i class="fab fa-twitter"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/sunhacksofficial/" class="button footbutton asdfasdf">
+          <span class="icon is-large">
+            <i class="fab fa-instagram"></i>
+          </span>
+        </a>
+        <a href="mailto:team@sunhacks.io" class="button footbutton asdfasdf">
+          <span class="icon is-large">
+            <i class="fas fa-paper-plane"></i>
+          </span>
+        </a>
+        <div class="content has-text-centered footbutton mb-1">
+            <a class="coc" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf"> MLH code of conduct </a>
+        </div>
+      </p>
+    </div>
+
+  </section>
+  <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:29" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
+
+  <script>
+  var COLORS = [ '#7188a3', '#d1697d','#e6cbca','#fffefd' ];
+
+  (function() {
+    var Mountain, MountainRange, dt, mountainRanges, sketch, baseHeigh;
+
+    sketch = Sketch.create({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
+
+    mountainRanges = [];
+
+    dt = 1;
+    baseSpeed = 500;
+    if(window.innerHeight > window.innerWidth) {
+      baseHeight = 150;
+    } else {
+      baseHeight = 300;
+    }
+
+    // MOUNTAINS
+
+    Mountain = function(config) {
+      return this.reset(config);
+    };
+
+    Mountain.prototype.reset = function(config) {
+      this.layer = config.layer;
+      this.x = config.x;
+      this.y = config.y;
+      this.width = config.width;
+      this.height = config.height;
+      return this.color = config.color;
+    };
+
+
+    // MOUNTAIN RANGE
+
+    MountainRange = function(config) {
+      this.x = 0;
+      this.mountains = [];
+      this.layer = config.layer;
+      this.width = {
+        min: config.width.min,
+        max: config.width.max
+      };
+      this.height = {
+        min: config.height.min,
+        max: config.height.max
+      };
+      this.speed = config.speed;
+      this.color = config.color;
+      this.populate();
+      return this;
+    };
+
+    MountainRange.prototype.populate = function() {
+      var newHeight, newWidth, results, totalWidth;
+      totalWidth = 0;
+      results = [];
+      while (totalWidth <= sketch.width + (this.width.max * 4)) {
+        newWidth = round(random(this.width.min, this.width.max));
+        newHeight = round(random(this.height.min, this.height.max));
+        this.mountains.push(new Mountain({
+          layer: this.layer,
+          x: this.mountains.length === 0 ? 0 : this.mountains[this.mountains.length - 1].x + this.mountains[this.mountains.length - 1].width,
+          y: sketch.height - newHeight,
+          width: newWidth,
+          height: newHeight,
+          color: this.color
+        }));
+        results.push(totalWidth += newWidth);
+      }
+      return results;
+    };
+
+    MountainRange.prototype.update = function() {
+      var firstMountain, lastMountain, newHeight, newWidth;
+      this.x -= (baseSpeed * this.speed) * dt;
+      firstMountain = this.mountains[0];
+      if (firstMountain.width + firstMountain.x + this.x < -this.width.max) {
+        newWidth = round(random(this.width.min, this.width.max));
+        newHeight = round(random(this.height.min, this.height.max));
+        lastMountain = this.mountains[this.mountains.length - 1];
+        firstMountain.reset({
+          layer: this.layer,
+          x: lastMountain.x + lastMountain.width,
+          y: sketch.height - newHeight,
+          width: newWidth,
+          height: newHeight,
+          color: this.color
+        });
+        return this.mountains.push(this.mountains.shift());
+      }
+    };
+
+    MountainRange.prototype.render = function() {
+      var c, d, i, j, pointCount, ref;
+      sketch.save();
+      sketch.translate(this.x, (sketch.height) / 100 * this.layer);
+      sketch.beginPath();
+      pointCount = this.mountains.length;
+      sketch.moveTo(this.mountains[0].x, this.mountains[0].y);
+      for (i = j = 0, ref = pointCount - 2; j <= ref; i = j += 1) {
+        c = (this.mountains[i].x + this.mountains[i + 1].x) / 2;
+        d = (this.mountains[i].y + this.mountains[i + 1].y) / 2;
+        sketch.quadraticCurveTo(this.mountains[i].x, this.mountains[i].y, c, d);
+      }
+      sketch.lineTo(sketch.width - this.x, sketch.height);
+      sketch.lineTo(0 - this.x, sketch.height);
+      sketch.closePath();
+      sketch.fillStyle = this.color;
+      sketch.fill();
+      return sketch.restore();
+    };
+
+
+    // SETUP
+
+    sketch.setup = function() {
+      var i, results;
+      i = 4;
+      results = [];
+      while (i--) {
+        results.push(mountainRanges.push(new MountainRange({
+          layer: i + 1,
+          width: {
+            min: (i + 1) * 50,
+            max: (i + 1) * 70
+          },
+          height: {
+            min: baseHeight - (i * 40),
+            max: baseHeight + 100 - (i * 40)
+          },
+          speed: (i + 1) * .003,
+          color: COLORS[i]
+        })));
+      }
+      return results;
+    };
+
+
+    // CLEAR
+
+    sketch.clear = function() {
+      return sketch.clearRect(0, 0, sketch.width, sketch.height);
+    };
+
+
+    // UPDATE
+
+    sketch.update = function() {
+      var i, results;
+      dt = sketch.dt < .1 ? .1 : sketch.dt / 16;
+      dt = dt > 5 ? 5 : dt;
+      i = mountainRanges.length;
+      results = [];
+      while (i--) {
+        results.push(mountainRanges[i].update(i));
+      }
+      return results;
+    };
+
+
+    // DRAW
+
+    sketch.draw = function() {
+      var i, results;
+      i = mountainRanges.length;
+      results = [];
+      while (i--) {
+        results.push(mountainRanges[i].render(i));
+      }
+      return results;
+    };
+
+  }).call(this);
+
+  /**
+   * Get the URL parameters
+   * source: https://css-tricks.com/snippets/javascript/get-url-variables/
+   * @param  {String} url The URL
+   * @return {Object}     The URL parameters
+   */
+  var getParams = function (url) {
+  	var params = {};
+  	var parser = document.createElement('a');
+  	parser.href = url;
+  	var query = parser.search.substring(1);
+  	var vars = query.split('&');
+  	for (var i = 0; i < vars.length; i++) {
+  		var pair = vars[i].split('=');
+  		params[pair[0]] = decodeURIComponent(pair[1]);
+  	}
+  	return params;
+  };
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('subscribe')) {
+      window.document.getElementById('success-subscribe').style.visibility = "visible";
+
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+
+      $delete.addEventListener('click', () => {
+        $notification.style.visibility = "hidden";
+      });
+    });
+  });
+  </script>
+</body>
 </html>
