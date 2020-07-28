@@ -124,6 +124,12 @@
           Thanks for subscribing! We're looking forward to (virtually) seeing you soon!
         </div>
       </header>
+      <header class="navbar has-text-centered" style="justify-items:center;">
+        <div class="notification" id="failed-subscribe" style="visibility:hidden">
+          <button class="delete"></button>
+          You're already subscribed! We're looking forward to (virtually) seeing you soon!
+        </div>
+      </header>
     </div>
     <div class="hero-body is-hidden-touch">
       <div class="columns is-vcentered" style="margin-left:15vw">
@@ -387,7 +393,9 @@ window.onload = function() {
   const urlParams = new URLSearchParams(window.location.search);
   if(urlParams.has('subscribe')) {
     window.document.getElementById('success-subscribe').style.visibility = "visible";
-
+  }
+  else if(urlParams.has('already-subbed')) {
+    window.document.getElementById('failed-subscribe').style.visibility = "visible";
   }
 };
 
