@@ -14,7 +14,7 @@
   <meta property="og:description"        content="Get ready for a weekend of building at #sunhacks2020 on October 9th - 11th!"/>
   <!-- for twitter -->
   <meta content="summary" name="twitter:card">
-  <meta content="@Sun_hacks" name="twitter:site">
+  <meta content="@sunhacksio" name="twitter:site">
   <meta content="sunhacks 2020" name="twitter:title">
   <meta content="Get ready for a weekend of building at #sunhacks2020 on October 9th - 11th!" name="twitter:description">
   <meta content="http://sunhacks.io/assets/sunhacks_icon_web.jpg" name="twitter:image">
@@ -119,15 +119,9 @@
   <section class="hero is-fullheight foreground">
     <div class="hero-head">
       <header class="navbar has-text-centered" style="justify-items:center;">
-        <div class="notification" id="success-subscribe" style="visibility:hidden">
+        <div class="notification" id="sub-notif" style="visibility:hidden">
           <button class="delete"></button>
-          Thanks for subscribing! We're looking forward to (virtually) seeing you soon!
-        </div>
-      </header>
-      <header class="navbar has-text-centered" style="justify-items:center;">
-        <div class="notification" id="failed-subscribe" style="visibility:hidden">
-          <button class="delete"></button>
-          You're already subscribed! We're looking forward to (virtually) seeing you soon!
+          <h1 id="sub-notif-text">Thanks for subscribing! We're looking forward to (virtually) seeing you soon!</h1>
         </div>
       </header>
     </div>
@@ -392,10 +386,11 @@ var getParams = function (url) {
 window.onload = function() {
   const urlParams = new URLSearchParams(window.location.search);
   if(urlParams.has('subscribe')) {
-    window.document.getElementById('success-subscribe').style.visibility = "visible";
+    window.document.getElementById('sub-notif').style.visibility = "visible";
   }
   else if(urlParams.has('already-subbed')) {
-    window.document.getElementById('failed-subscribe').style.visibility = "visible";
+    window.document.getElementById('sub-notif-text').innerHTML = "You're already subscribed! We're looking forward to (virtually) seeing you soon!"
+    window.document.getElementById('sub-notif').style.visibility = "visible";
   }
 };
 
