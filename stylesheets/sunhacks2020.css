@@ -1,102 +1,111 @@
-html, body {
-    text-align: center;
-  }
-  canvas {
-    background: #1a1a3e;
-    margin: 0;
-    display: block;
-    position: relative;
-    left: 0;
-    top:0;
-    z-index: -1 !important;
-  }
-  
-  .foreground {
-    margin: 0;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-  }
-  .hero-body {
-    margin-bottom: 20vh;
-  }
-  .has-text-white {
-    color: #fffefd !important
-  }
-  .has-text-blue {
-    color: #1a1a3e !important
-  }
+html,
+body {
+  text-align: center;
+}
+canvas {
+  background: #1a1a3e;
+  margin: 0;
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: -1 !important;
+}
 
-  .footbutton, a.coc{
-    color: #1a1a3e !important;
-    background: none;
-    border: none;
-  }
-  .footbutton:hover, a.coc:hover{
-    color: #7188a3 !important
-  }
+.foreground {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hero-body {
+  margin-bottom: 20vh;
+}
+.has-text-white {
+  color: #fffefd !important;
+}
+.has-text-blue {
+  color: #1a1a3e !important;
+}
 
-  .subscribe {
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-  }
+.footbutton,
+a.coc {
+  color: #1a1a3e !important;
+  background: none;
+  border: none;
+}
+.footbutton:hover,
+a.coc:hover {
+  color: #7188a3 !important;
+}
 
-  .mentor {
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-  }
+.subscribe {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
 
-  .main {
-    margin-top: 5vh;
-  }
+.mentor {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
 
-  .is-blue {
-    background-color: #7188a3;
-    border: none;
-  }
+.main {
+  margin-top: 5vh;
+}
 
-  .is-dark-blue {
-    background-color: #1a1a3e;
-    border: none;
-  }
+.is-blue {
+  background-color: #7188a3;
+  border: none;
+}
 
-  .notification {
-    margin: 0 auto;
-    display: inline-block;
-    overflow: hidden;
-  }
+.is-dark-blue {
+  background-color: #1a1a3e;
+  border: none;
+}
 
-  .tier {
-    margin: 5vh;
-  }
-  .star{
-    height:7vh;
-  }
-  .planet{
-    height:7vh;
-  }
-  .comet{
-    height:5vh;
-  }
-  img{
-    max-height:100%;
-  }
+.notification {
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+}
 
-  .changes .card {
-    margin-top: 5vh;
-   
-  }
-  .showcase{
-    margin-top: 5vh;
-    height: 40vh;
-  }
-  .showcase img {
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-  }
+.tier {
+  margin: 5vh;
+}
+.star {
+  height: 7vh;
+}
+.planet {
+  height: 7vh;
+}
+.comet {
+  height: 5vh;
+}
+img {
+  max-height: 100%;
+}
 
-  hr {
-    border: 2px solid #d1697d;
-    width: 25%;
-    margin-left: auto;
+.changes .card {
+  margin-top: 5vh;
+}
+.showcase {
+  margin-top: 5vh;
+  height: 40vh;
+}
+.showcase img {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+hr {
+  border: 2px solid #d1697d;
+  width: 25%;
+  margin-left: auto;
   margin-right: auto;
-  }
+}
+
+.addMargin {
+  margin: 1vh;
+}
