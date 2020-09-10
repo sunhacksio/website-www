@@ -59,14 +59,6 @@
   </div>
 
   <section class="hero is-fullheight foreground">
-    <div class="hero-head">
-      <header class="navbar has-text-centered" style="justify-items:center;">
-        <div class="notification" id="sub-notif" style="visibility:hidden">
-          <button class="delete"></button>
-          <h1 id="sub-notif-text">Thanks for subscribing! We're looking forward to (virtually) seeing you soon!</h1>
-        </div>
-      </header>
-    </div>
     <div class="hero-body is-hidden-touch">
       <div class="columns is-vcentered" style="margin-left:15vw">
         <div class="column is-3" align="center">
@@ -78,8 +70,10 @@
           <h1 class="title is-1 has-text-white">sunhacks</h1>
           <h2 class="subtitle is-3 has-text-white">October 9th - 11th, 2020</h2>
           <h2 class="subtitle has-text-white">coming to a stream near you</h2>
-          <a class="button subscribe has-text-blue" onclick="document.getElementById('modal-subscribe').classList.add('is-active');" name="subbutton">subscribe for updates</a>
-          <a class="button mentor has-text-blue" href="https://forms.gle/qYsDcUYV1SgoM6iy8" target="_blank">sign up to mentor</a>
+          <div class="buttons">
+            <a class="button subscribe has-text-blue" href="https://sunhacks.typeform.com/to/nBKGjd3a" target="_blank">register for sunhacks</a>
+            <a class="button mentor has-text-blue" href="https://forms.gle/qYsDcUYV1SgoM6iy8" target="_blank">sign up to mentor</a>
+          </div>
         </div>
       </div>
     </div>
@@ -298,29 +292,6 @@ var getParams = function (url) {
   }
   return params;
 };
-window.onload = function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  if(urlParams.has('subscribe')) {
-    window.document.getElementById('sub-notif').style.visibility = "visible";
-  }
-  else if(urlParams.has('already-subbed')) {
-    window.document.getElementById('sub-notif-text').innerHTML = "You're already subscribed! We're looking forward to (virtually) seeing you soon!"
-    window.document.getElementById('sub-notif').style.visibility = "visible";
-  }
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-    $notification = $delete.parentNode;
-
-    $delete.addEventListener('click', () => {
-      $notification.style.visibility = "hidden";
-    });
-  });
-});
-
-
-
 </script>
 
 <section class="section">
