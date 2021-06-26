@@ -1,562 +1,371 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="small-purple-sun.png">
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="sunhacks">
+    <link rel="icon" href="/assets/images/small-pink-sun.svg">
 
-  <!-- Primary Meta Tags -->
-  <title>sunhacks 2020</title>
-  <meta name="title" content="sunhacks 2020">
-  <meta name="description" content="Get ready for a weekend of building at #sunhacks2020 on October 9th - 11th!">
+    <meta name="title" content="sunhacks 2020">
+    <meta name="description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
+  
+      <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sunhacks.io/">
+    <meta property="og:title" content="sunhacks 2021">
+    <meta property="og:description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
+    <meta property="og:image" content="https://sunhacks.io/assets/images/meta-image.png">
+  
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sunhacks.io/">
+    <meta property="twitter:title" content="sunhacks 2021">
+    <meta property="twitter:description" content="Get ready for a weekend of building at #sunhacks2021 on October 1st - 3rd!">
+    <meta property="twitter:image" content="https://sunhacks.io/assets/images/meta-image.png">
+    
+    <!-- TITLE -->
+    <title>sunhacks 2021</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sunhacks.io/">
-  <meta property="og:title" content="sunhacks 2020">
-  <meta property="og:description" content="Get ready for a weekend of building at #sunhacks2020 on October 9th - 11th!">
-  <meta property="og:image" content="https://sunhacks.io/assets/meta-image.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://sunhacks.io/">
-  <meta property="twitter:title" content="sunhacks 2020">
-  <meta property="twitter:description" content="Get ready for a weekend of building at #sunhacks2020 on October 9th - 11th!">
-  <meta property="twitter:image" content="https://sunhacks.io/assets/meta-image.png">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sketch-js@1.1.3/js/sketch.min.js"></script>
-  <link rel="stylesheet" href="stylesheets/sunhacks2020.css">
-<script src="js/sunhacks2020.js"></script>
+    <!-- STYLESHEETS-->
+    <link rel="stylesheet" href="assets/lib/98.css">
+    <link rel="stylesheet" href="assets/index.css">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </head>
+
 <body>
-  <section class="hero is-fullheight foreground">
-    <div class="hero-body is-hidden-touch">
-      <div class="columns is-vcentered" style="margin-left:15vw">
-        <div class="column is-3" align="center">
-          <figure class="image">
-            <img src="https://sunhacks.io/assets/logo-white.png" alt="sunhacks Logo: a power button with 7 spokes coming from it">
-          </figure>
+
+    <div class="main">
+
+        <div class="centered" id="main">
+            <div class="window sunhacks-window setup">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 setup wizard</div>
+                    <div class="title-bar-controls">
+                        <button id="help_btn" aria-label="Help"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="window-top">
+                        <div class="window-splash">
+                            <div class="splash-art">
+                                <img src="assets/images/top-party.svg" alt="" class="top-party">
+                                <img src="assets/images/computer.svg" alt="" class="computer">
+                                <img src="assets/images/bottom-party.svg" alt="" class="bottom-party">
+                            </div>
+                        </div>
+                        <div class="window-info">
+                            <div class="title">welcome to sunhacks</div>
+                            <p><strong>Online and at Arizona State University, October 1st - 3rd 2021</strong></p>
+                            <p>The sunhacks setup wizards (organizers) are installing the 2021 event.
+                                Please wait while registration is being setup...</p>
+                            <form id="subscribe" action="https://sendy.sunhacks.io/subscribe" method="POST"
+                                accept-charset="utf-8" oninput="name.value = FirstName.value + ' ' + LastName.value">
+                                <input type="hidden" name="list" value="3iMgiuJkeBTsOxNZWLjDDQ" />
+                                <input type="hidden" name="name">
+                                <fieldset>
+                                    <legend>Hacker Registration</legend>
+                                    Registration starts <strong>July 19th</strong>. Sign up now to get notified:
+                                    <div class="field-row-stacked" id=firstNameField>
+                                        <label for="FirstName">First Name</label>
+                                        <input id="FirstName" type="text" name="FirstName" required />
+                                    </div>
+                                    <div class="field-row-stacked" id="lastNameField">
+                                        <label for="LastName">Last Name</label>
+                                        <input id="LastName" type="text" name="LastName" required />
+                                    </div>
+                                    <div class="field-row-stacked" id="emailField">
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" name="email" required />
+                                    </div>
+                                    <div class="field-row-stacked">
+                                        <input type="checkbox" name="gdpr" id="gdpr" required>
+                                        <label for="gdpr">Send me emails about sunhacks</label>
+                                    </div>
+                                    <div class="field-row-stacked">
+                                        <button type="submit" id="submit" disabled>Notify me about sunhacks
+                                            registration</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <div class="volunteering">
+                                <p>Interested in...</p>
+                                <section class="field-row">
+                                    <button id="sponsor"> Sponsoring </button>
+                                    <a href="https://forms.gle/vGHTGASK2a1kPi9D8" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <button id="volunteeringBtn"> Helping out </button>
+                                    </a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window-footer">
+                        <hr class="hr--accent">
+                        <p>Question? Click the <a href="#" id="help"> help button</a> or send an email to
+                            <a href="mailto:team@sunhacks.io">team@sunhacks.io</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="window-body footer">
+                    <div class="socials">
+                        <a href="https://www.facebook.com/sunhacksio/" target="_blank" rel="noopener noreferrer"
+                            title="Facebook"><button title="Facebook"><i class="fab fa-facebook-f"></i></button></a>
+                        <a href="https://twitter.com/sunhacksio" target="_blank" rel="noopener noreferrer"
+                            title="Twitter"><button title="Twitter"><i class="fab fa-twitter"></i></button></a>
+                        <a href="https://www.instagram.com/sunhacksio/" target="_blank" rel="noopener noreferrer"
+                            title="Instagram"><button title="Instagram"><i class="fab fa-instagram"></i></button></a>
+                        <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank"
+                            rel="noopener noreferrer" title="Code of Conduct"><button title="Code of Conduct"><i
+                                    class="fas fa-file-alt"></i></button></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="column is-5" align="left">
-          <h1 class="title is-1 has-text-white">sunhacks</h1>
-          <!-- <h2 class="subtitle is-3 has-text-white">October 9th - 11th, 2020</h2> -->
-          <h2 class="subtitle has-text-white">coming to a stream near you</h2>
-          <div class="buttons">
-            <!-- <a class="button subscribe has-text-blue" href="" target="_blank">register for sunhacks</a> -->
-            <a class="button mentor has-text-blue" href="http://links.sunhacks.io/organize" target="_blank">join our team</a>
-            <!-- <h6 class="subtitle is-6 has-text-white">Registration closes Saturday, Oct. 10, 9:30PM Arizona Time.</h6> -->
-          </div>
+        <div class="centered" id="faq" style="display:none">
+            <div class="window sunhacks-window faq-box">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 FAQ</div>
+                    <div class="title-bar-controls">
+                        <button id="faq_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p><strong>Frequently Asked Questions</strong></p>
+                    <ul class="tree-view">
+                        <li>
+                            <strong>what is a hackathon?</strong>
+                            <ul>
+                                <li>
+                                    We consider a hackathon to be a 24-36 hour prototyping marathon. sunhacks is a 36
+                                    hour hackathon this year! Work on software or hardware solutions to real world
+                                    problems, innovative projects, or anything you can think of (even if it’s a silly
+                                    idea)!
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>who can hack?</strong>
+                            <ul>
+                                <li>
+                                    Anybody and everybody over the age of 18 can participate! Arizona State University
+                                    students can attend in-person, however, we are limiting in-person participants at
+                                    our venue and streaming studio, apply early to snag a spot.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>i've never programmed before, is it okay?</strong>
+                            <ul>
+                                <li>
+                                    Yes! Programmers are not the only people who can participate at a hackathon. We have
+                                    had designers, businesspeople, and all sorts of backgrounds and levels of experience
+                                    attend sunhacks. If you are new to programming, we also have mentors and workshops
+                                    that can teach you how to code! All you need to do is attend, and we’ll support you
+                                    the rest of the way!
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>how much does it cost to participate?</strong>
+                            <ul>
+                                <li>
+                                    sunhacks costs zip, zilch and nada to participate! We will never charge you any sort
+                                    of participation fee.
+                                </li>
+                            </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <strong>what are the rules?</strong>
+                            <ul>
+                                <li>
+                                    Follow the MLH code of conduct! If you are participating with a team, a maximum of 4
+                                    people are allowed. Regardless of whether you are in a team or on your own, only one
+                                    project can be submitted for the weekend.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>can I be a mentor/judge/speaker?</strong>
+                            <ul>
+                                <li>
+                                    Our participation rules apply (see: “who can hack”), but we are open to making
+                                    exceptions where applicable. All are eligible to be a mentor or speaker regardless
+                                    of prior experience. If you are a hacker you cannot be a judge though. As we have
+                                    limited space for speakers and judges, those will be selected based on talk or
+                                    experience respectively and you will receive confirmation from us when it comes
+                                    time.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>can I request additional accommodations?</strong>
+                            <ul>
+                                <li>
+                                    Absolutely. We will be providing closed captioning, expect our speakers to provide
+                                    additional accessible resources, and have multiple methods of interacting with our
+                                    event through Discord. However, we can always do better. We encourage you to inform
+                                    us through our registration, volunteer form, or via email as soon as possible so we
+                                    can incorporate your needs and continue shaping the environment toward a more
+                                    inclusive future for all.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="centered" id="success" style="display: none;">
+            <div class="window sunhacks-window info-box">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 subscribe success</div>
+                    <div class="title-bar-controls">
+                        <button id="success_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        You have been successfully added to the sunhacks 2021 mailing list! We will let you know
+                        when
+                        the full site launches and registration opens.
+                    </p>
+                    <section class="field-row subscribed">
+                        <button id="success_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="centered" id="exists" style="display: none;">
+            <div class="window sunhacks-window info-box">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 already subscribed</div>
+                    <div class="title-bar-controls">
+                        <button id="exists_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        You're already subscribed to the sunhacks 2021 mailing list! We will let you know when the
+                        full
+                        site launches and registration opens.
+                    </p>
+                    <section class="field-row subscribed">
+                        <button id="exists_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="centered" id="sponsorship" style="display:none;">
+            <div class="window sunhacks-window info-box">
+                <div class="title-bar">
+                    <div class="title-bar-text">sunhacks 2021 sponsorship</div>
+                    <div class="title-bar-controls">
+                        <button id="sponsor_btn" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        By sponsoring sunhacks, you help support the growth of hundreds of students
+                        and reach a worldwide community of technologists. For more
+                        information and our sponsorship packet reach out to us at <a
+                            href="mailto:industry@sunhacks.io">industry@sunhacks.io</a>
+                    </p>
+                    <section class="field-row subscribed">
+                        <button id="sponsor_ok">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    <a id="mlh-trust-badge"
+        style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
+        href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
+        target="_blank"><img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
+            alt="Major League Hacking 2022 Hackathon Season" style="width:100%"></a>
+    <script>
 
-  <div class="hero-body is-hidden-desktop">
-    <div class="container has-text-centered">
-      <figure class="image is-128x128 is-inline-block">
-        <img src="https://sunhacks.io/assets/logo-white.png" alt="sunhacks Logo: a power button with 7 spokes coming from it">
-      </figure>
-      <h1 class="title is-1 has-text-white">sunhacks</h1>
-      <h2 class="subtitle is-4 has-text-white">October 9th - 11th, 2020</h2>
-      <h2 class="subtitle has-text-white">coming to a stream near you</h2>
-      <div class="buttons is-centered">
-            <a class="button mentor has-text-blue" href="http://links.sunhacks.io/organize" target="_blank">join our team</a>
+        const form = document.getElementById('subscribe');
+        form.addEventListener("change", () => {
+            document.getElementById('submit').disabled = !form.checkValidity()
+        });
 
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<script>
-var COLORS = [ '#7188a3', '#d1697d','#e6cbca','#fffefd' ];
+        document.getElementById('exists_btn').addEventListener('click', function () {
+            document.getElementById('exists').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('exists_ok').addEventListener('click', function () {
+            document.getElementById('exists').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
 
-(function() {
-  var Mountain, MountainRange, dt, mountainRanges, sketch, baseHeigh;
+        document.getElementById('success_btn').addEventListener('click', function () {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('success_ok').addEventListener('click', function () {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
 
-  sketch = Sketch.create({
-    height: window.innerHeight,
-    width: window.innerWidth
-  });
+        document.getElementById('faq_btn').addEventListener('click', function () {
+            document.getElementById('faq').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('help_btn').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('faq').style.display = 'initial';
+        });
+        document.getElementById('help').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('faq').style.display = 'initial';
+        });
 
-  mountainRanges = [];
+        document.getElementById('sponsor').addEventListener('click', function () {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('sponsorship').style.display = 'initial';
+        });
+        document.getElementById('sponsor_btn').addEventListener('click', function () {
+            document.getElementById('sponsorship').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
+        document.getElementById('sponsor_ok').addEventListener('click', function () {
+            document.getElementById('sponsorship').style.display = 'none';
+            document.getElementById('main').style.display = 'initial';
+        });
 
-  dt = 1;
-  baseSpeed = 500;
-  if(window.innerHeight > window.innerWidth) {
-    baseHeight = 150;
-  } else {
-    baseHeight = 300;
-  }
+        /**
+        * Get the URL parameters
+        * source: https://css-tricks.com/snippets/javascript/get-url-variables/
+        * @param  {String} url The URL
+        * @return {Object}     The URL parameters
+        */
+        var getParams = function (url) {
+            var params = {};
+            var parser = document.createElement('a');
+            parser.href = url;
+            var query = parser.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                params[pair[0]] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        };
 
-  // MOUNTAINS
-
-  Mountain = function(config) {
-    return this.reset(config);
-  };
-
-  Mountain.prototype.reset = function(config) {
-    this.layer = config.layer;
-    this.x = config.x;
-    this.y = config.y;
-    this.width = config.width;
-    this.height = config.height;
-    return this.color = config.color;
-  };
-
-
-  // MOUNTAIN RANGE
-
-  MountainRange = function(config) {
-    this.x = 0;
-    this.mountains = [];
-    this.layer = config.layer;
-    this.width = {
-      min: config.width.min,
-      max: config.width.max
-    };
-    this.height = {
-      min: config.height.min,
-      max: config.height.max
-    };
-    this.speed = config.speed;
-    this.color = config.color;
-    this.populate();
-    return this;
-  };
-
-  MountainRange.prototype.populate = function() {
-    var newHeight, newWidth, results, totalWidth;
-    totalWidth = 0;
-    results = [];
-    while (totalWidth <= sketch.width + (this.width.max * 4)) {
-      newWidth = round(random(this.width.min, this.width.max));
-      newHeight = round(random(this.height.min, this.height.max));
-      this.mountains.push(new Mountain({
-        layer: this.layer,
-        x: this.mountains.length === 0 ? 0 : this.mountains[this.mountains.length - 1].x + this.mountains[this.mountains.length - 1].width,
-        y: sketch.height - newHeight,
-        width: newWidth,
-        height: newHeight,
-        color: this.color
-      }));
-      results.push(totalWidth += newWidth);
-    }
-    return results;
-  };
-
-  MountainRange.prototype.update = function() {
-    var firstMountain, lastMountain, newHeight, newWidth;
-    this.x -= (baseSpeed * this.speed) * dt;
-    firstMountain = this.mountains[0];
-    if (firstMountain.width + firstMountain.x + this.x < -this.width.max) {
-      newWidth = round(random(this.width.min, this.width.max));
-      newHeight = round(random(this.height.min, this.height.max));
-      lastMountain = this.mountains[this.mountains.length - 1];
-      firstMountain.reset({
-        layer: this.layer,
-        x: lastMountain.x + lastMountain.width,
-        y: sketch.height - newHeight,
-        width: newWidth,
-        height: newHeight,
-        color: this.color
-      });
-      return this.mountains.push(this.mountains.shift());
-    }
-  };
-
-  MountainRange.prototype.render = function() {
-    var c, d, i, j, pointCount, ref;
-    sketch.save();
-    sketch.translate(this.x, (sketch.height) / 100 * this.layer);
-    sketch.beginPath();
-    pointCount = this.mountains.length;
-    sketch.moveTo(this.mountains[0].x, this.mountains[0].y);
-    for (i = j = 0, ref = pointCount - 2; j <= ref; i = j += 1) {
-      c = (this.mountains[i].x + this.mountains[i + 1].x) / 2;
-      d = (this.mountains[i].y + this.mountains[i + 1].y) / 2;
-      sketch.quadraticCurveTo(this.mountains[i].x, this.mountains[i].y, c, d);
-    }
-    sketch.lineTo(sketch.width - this.x, sketch.height);
-    sketch.lineTo(0 - this.x, sketch.height);
-    sketch.closePath();
-    sketch.fillStyle = this.color;
-    sketch.fill();
-    return sketch.restore();
-  };
-
-
-  // SETUP
-
-  sketch.setup = function() {
-    var i, results;
-    i = 4;
-    results = [];
-    while (i--) {
-      results.push(mountainRanges.push(new MountainRange({
-        layer: i + 1,
-        width: {
-          min: (i + 1) * 50,
-          max: (i + 1) * 70
-        },
-        height: {
-          min: baseHeight - (i * 40),
-          max: baseHeight + 100 - (i * 40)
-        },
-        speed: (i + 1) * .003,
-        color: COLORS[i]
-      })));
-    }
-    return results;
-  };
-
-
-  // CLEAR
-
-  sketch.clear = function() {
-    return sketch.clearRect(0, 0, sketch.width, sketch.height);
-  };
-
-
-  // UPDATE
-
-  sketch.update = function() {
-    var i, results;
-    dt = sketch.dt < .1 ? .1 : sketch.dt / 16;
-    dt = dt > 5 ? 5 : dt;
-    i = mountainRanges.length;
-    results = [];
-    while (i--) {
-      results.push(mountainRanges[i].update(i));
-    }
-    return results;
-  };
-
-
-  // DRAW
-
-  sketch.draw = function() {
-    var i, results;
-    i = mountainRanges.length;
-    results = [];
-    while (i--) {
-      results.push(mountainRanges[i].render(i));
-    }
-    return results;
-  };
-
-}).call(this);
-
-/**
-* Get the URL parameters
-* source: https://css-tricks.com/snippets/javascript/get-url-variables/
-* @param  {String} url The URL
-* @return {Object}     The URL parameters
-*/
-var getParams = function (url) {
-  var params = {};
-  var parser = document.createElement('a');
-  parser.href = url;
-  var query = parser.search.substring(1);
-  var vars = query.split('&');
-  for (var i = 0; i < vars.length; i++) {
-    var pair = vars[i].split('=');
-    params[pair[0]] = decodeURIComponent(pair[1]);
-  }
-  return params;
-};
-</script>
-<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:29" href="https://mlh.io/seasons/na-2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a>
-
-<section class="section">
-  <div class="container">
-    <h1 class="title is-1 has-text-blue main">what is sunhacks?</h1>
-    <hr/>
-    <p class="cardsubtitle">sunhacks is a yearly Fall hackathon (ideathon, coding marathon, prototyping marathon, etc) designed to support students in their innovative journeys. sunhacks is for students of all skill levels, and our job as organizers is to support you by providing the resources you need to achieve your development dreams. We provide you with workshops, mentors, community connections, and peers who are motivated to help each other succeed and reach their goals. </p>
-
-  <figure class="showcase">
-     <img src="assets/showcase1.jpg" alt="A group of students holding up pickfork gestures at sunhacks opening ceremonies">
-  </figure>
-
-  </div>
-  <div class="container">
-    <h1 class="title is-1 has-text-blue main">big changes ahead!</h1>
-    <hr/>
-    <p class="cardsubtitle">This year, things are different. With the current situation and times ahead, we've have great news to share about this year's event!</p>
-    <div class="columns">
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">completely virtual</p>
-          </header>
-          <p class="card-content">We'll be using Discord, Twitch, and other streaming and platforms to host our virtual hackathon.</p>
-        </div>
-      </div>
-      <div class="column">
-         <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">more accessible</p>
-          </header>
-            <p class="card-content">We are open to all skill levels, ages, background, fields, and more. As long as you're a student you're in!</p>
-        </div>
-      </div>
-      <div class="column">
-         <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            virtual workshops
-          </p>
-          </header>
-          <p class="card-content">We'll have our usual variety of workshops online and accessible through our online platform!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <h1 class="title is-1 has-text-blue main">faq</h1>
-    <hr/>
-    <p class="cardsubtitle">We know that things can be pretty intimidating when there's a lot of unknowns, so check out the some what ifs below! If you still have questions email us at <a href="mailto:team@sunhacks.io">team@sunhacks.io</a></p>
-    <div class="columns">
-      <div class="column">
-        <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">hackathon?</p>
-          <a class="card-header-icon card-toggle">
-            <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">Hackathons carry a lot of connotations, but we do our best to make sure that sunhacks is every bit of beginner friendly that we can make it. We don't hack into things, but we do build things! As long as there's even a sliver of interest in coding, we are ready (as is the community) to get you started. Unlike other specialty hackathons, sunhacks is a very open-minded, open-field, open-everything kind of hackathon. we support code and hardware hacks. Who knows, maybe you might even make a new type of hack!</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            what do I do at a hackathon?
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">Up to you! You will have the opportunity to network with our sponsors and other hackers, attend workshops to learn new skills, demonstrate your project in an awesome presentation to our judges, and have fun kicking it with everyone during activities! Find/bring a team or work on your own and knock out a prototype for an idea that'll knock our judges socks off</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            teams?
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">Max team size is four (4), minimum team size is one (1, meaning you!). Make sure each of your team members 1) register to attend and 2) when it comes time to submit the project all members are included in the submission.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-        <header class="card-header">
-        <p class="card-header-title is-centered">
-          cost?
-        </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-        </header>
-        <div class="card-content is-hidden">
-        <p class="card-content">sunhacks is free to play--err, hack</p>
-        </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            rules?
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">As an MLH member event, all attendees must follow the MLH code of conduct</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            I don't know how to code / I don't think I'm good enough to attend
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-                <p class="card-content">Hey friend, we understand those feelings. You are absolutely welcome and encouraged to attend our hackathon. The unknown is daunting, but we're here to help. Many of our organizers have felt the same way too, and it's because we know how you feel that we've made sunhacks the way it is today: an open community that empowers and supports each other. Our mentors look forward to your questions--no question is too simple. Welcome new hacker, we look forward to seeing you :)</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            I'm stuck at home with no technology to work with!
-          </p>
-          <a class="card-header-icon card-toggle">
-              <i class="fa fa-angle-down"></i>
-            </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">That's okay! As long as you have a computer and a brain you can figure something out. There's a lot of online code editors and simulators out there, and one of our speakers will also have an opportunity for you to leverage their servers for certain work! That said, whoever said you HAVE to have a coding project? We certainly didn't, and we sure as heck have a prize category that accommodates projects that are little to no code!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            what are the tracks / why aren't there any tracks?
-          </p>
-            <a class="card-header-icon card-toggle">
-            <i class="fa fa-angle-down"></i>
-            </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">sunhacks likes to challenge the status quo as well as also provide its hackers with the freedom to innovate. We don't use tracks, but we do make sure we can accommodate the wide variety of ideas our participants can have! so come, be creative, and challenge yourself to think outside the track!</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            so I hear there's prizes?
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">We do have prizes! but what they are... Well you'll have to attend won't you ;)</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <header class="card-header">
-          <p class="card-header-title is-centered">
-            how can I be a mentor?
-          </p>
-          <a class="card-header-icon card-toggle">
-          <i class="fa fa-angle-down"></i>
-          </a>
-          </header>
-          <div class="card-content is-hidden">
-          <p class="card-content">Click the sign up to mentor button on the top of the page! you can be a mentor even if you're a hacker!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-    <div class="container">
-    <h1 class="title is-1 has-text-blue main">sponsors</h1>
-  <hr/>
-
-  <div class="columns is-vcentered is-centered">
-    <div class="column is-three-quarters">
-        <a href="https://statefarm.com" target="_blank"><img src="./assets/sponsors/statefarm.png"/></a>
-    </div>
-  </div>
-
-  <div class="columns is-vcentered is-centered">
-    <div class="column is-three-fifths">
-      <a href="https://amazon.com" target="_blank"><img src="./assets/sponsors/amazon.png"/></a>
-    </div>
-  </div>
-
-  <div class="columns is-vcentered is-centered">
-    <div class="column is-three-fifths">
-      <a href="https://workiva.com" target="_blank"><img src="./assets/sponsors/workiva.png"/></a>
-    </div>
-  </div>
-</div>
-  </section>
-  <section class="section">
-      <div class="container">
-      <h1 class="title is-1 has-text-blue main">partners</h1>
-    <hr/>
-    <div class="columns is-multiline is-vcentered is-centered">
-      <div class="column is-one-fifth">
-        <a href="https://codedevils.org/" target="_blank"><img src="./assets/sponsors/code_devils.png"/></a>
-      </div>
-      <div class="column is-one-fifth">
-        <a href="https://devils-invent.engineering.asu.edu/" target="_blank"><img src="./assets/sponsors/devils_invent.png"/></a>
-      </div>
-      <div class="column is-one-fifth">
-        <a href="https://cloud.google.com/" target="_blank"><img src="./assets/sponsors/gcp_color.png"/></a>
-      </div>
-    </div>
-    <div class="columns is-multiline is-vcentered is-centered">
-
-      <div class="column is-one-fifth">
-        <a href="https://mlh.io" target="_blank"><img src="./assets/sponsors/mlh.png"/></a>
-      </div>
-      <div class="column is-one-fifth">
-        <a href="https://thesoda.io" target="_blank"><img src="./assets/sponsors/soda.png"/></a>
-      </div>
-    </div>
-      </div>
-    </section>
-
-  <section class="section">
-    <div class="hero-foot">
-  <p class="buttons is-centered mb-0 are-large">
-    <a href="https://www.facebook.com/sunhacksio/" class="button footbutton">
-      <span class="icon is-large">
-        <i class="fab fa-facebook"></i>
-      </span>
-    </a>
-    <a href="https://twitter.com/sunhacksio" class="button footbutton">
-      <span class="icon is-large">
-        <i class="fab fa-twitter"></i>
-      </span>
-    </a>
-    <a href="https://www.instagram.com/sunhacksio/" class="button footbutton asdfasdf">
-      <span class="icon is-large">
-        <i class="fab fa-instagram"></i>
-      </span>
-    </a>
-    <a href="mailto:team@sunhacks.io" class="button footbutton asdfasdf">
-      <span class="icon is-large">
-        <i class="fas fa-paper-plane"></i>
-      </span>
-    </a>
-    <div class="content has-text-centered footbutton mb-1">
-      <a class="coc" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf"> MLH code of conduct </a>
-    </div>
-  </p>
-</div>
-</section>
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                window.document.getElementById('success').style.display = "initial";
+                window.document.getElementById('main').style.display = 'none';
+            }
+            else if (urlParams.has('exists')) {
+                window.document.getElementById('exists').style.display = "initial";
+                window.document.getElementById('main').style.display = 'none';
+            }
+        };
+    </script>
 </body>
-</html>
