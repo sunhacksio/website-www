@@ -240,7 +240,9 @@
                         the full site launches and registration opens.
                     </p>
                     <section class="field-row subscribed">
-                        <button id="success_ok">OK</button>
+                        <form action="../">
+                            <button id="success_ok">OK</button>
+                        </form>
                     </section>
                 </div>
             </div>
@@ -260,7 +262,9 @@
                         site launches and registration opens.
                     </p>
                     <section class="field-row subscribed">
-                        <button id="exists_ok">OK</button>
+                        <form action="../">
+                            <button id="exists_ok">OK</button>
+                        </form>
                     </section>
                 </div>
             </div>
@@ -300,23 +304,23 @@
             document.getElementById('submit').disabled = !form.checkValidity()
         });
 
-        document.getElementById('exists_btn').addEventListener('click', function () {
-            document.getElementById('exists').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('exists_ok').addEventListener('click', function () {
-            document.getElementById('exists').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
+        // document.getElementById('exists_btn').addEventListener('click', function () {
+        //     document.getElementById('exists').style.display = 'none';
+        //     document.getElementById('main').style.display = 'initial';
+        // });
+        // document.getElementById('exists_ok').addEventListener('click', function () {
+        //     document.getElementById('exists').style.display = 'none';
+        //     document.getElementById('main').style.display = 'initial';
+        // });
 
-        document.getElementById('success_btn').addEventListener('click', function () {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
-        document.getElementById('success_ok').addEventListener('click', function () {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('main').style.display = 'initial';
-        });
+        // document.getElementById('success_btn').addEventListener('click', function () {
+        //     document.getElementById('success').style.display = 'none';
+        //     document.getElementById('main').style.display = 'initial';
+        // });
+        // document.getElementById('success_ok').addEventListener('click', function () {
+        //     document.getElementById('success').style.display = 'none';
+        //     document.getElementById('main').style.display = 'initial';
+        // });
 
         document.getElementById('faq_btn').addEventListener('click', function () {
             document.getElementById('faq').style.display = 'none';
